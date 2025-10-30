@@ -1,0 +1,11 @@
+# ZMK Studio metadata
+studio:
+  name: "Two Percent Milk"
+  manufacturer: "Your Name"
+  url: "https://github.com/<your_username>/<your_repo>"
+
+keymap:
+  - name: Default Layer
+    bindings:
+      - &kp X
+      - &kp Z
