@@ -1,0 +1,35 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Default";
+            bindings = <
+                &kp Q &kp W &kp E &kp R &kp T
+                &kp A &kp S &kp D &kp F &kp G
+                &kp Z &kp X &kp C &kp V &kp B
+            >;
+        };
+    };
+
+    behaviors {
+        encoder_ccw: encoder_ccw {
+            compatible = "zmk,behavior-tap";
+            label = "ENCODER CCW";
+            #binding-cells = <0>;
+            bindings = <&kp VOL_DN>;
+        };
+
+        encoder_cw: encoder_cw {
+            compatible = "zmk,behavior-tap";
+            label = "ENCODER CW";
+            #binding-cells = <0>;
+            bindings = <&kp VOL_UP>;
+        };
+    };
+
+    rotary-encoder-bindings {
+        compatible = "zmk,behavior-binding";
+        bindings = <&encoder_ccw>, <&encoder_cw>;
+    };
+};
